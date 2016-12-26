@@ -1,0 +1,81 @@
+<div id="home">
+	<ol class="breadcrumb">
+		<li class="active">
+			<a ui-sref="home">主页</a>
+		</li>
+	</ol>
+	<div class="row">
+		<!--联系人-->
+		<div class="col-sm-6 col-md-6 col-lg-4 home-block">
+			<div class="alert alert-success">
+				<div class="row">
+					<div class="col-xs-4">
+						<i class="glyphicon glyphicon-user"></i>
+					</div>
+					<div class="col-xs-8 text-right">
+						<div class="announcement-text"><span>365</span>名联系人</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--筹款-->
+		<div class="col-sm-6 col-md-6 col-lg-4 home-block">
+			<div class="alert alert-warning">
+				<div class="row">
+					<div class="col-xs-4">
+						<img ng-src="./img/money.png" />
+					</div>
+					<div class="col-xs-8 text-right">
+						<div class="announcement-text"><span>15134.8</span>元筹款</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--邮件-->
+		<div class="col-sm-6 col-md-6 col-lg-4 home-block">
+			<div class="alert alert-info">
+				<div class="row">
+					<div class="col-xs-4">
+						<i class="glyphicon glyphicon-envelope"></i>
+					</div>
+					<div class="col-xs-8 text-right">
+						<div class="announcement-text"><span>6</span>封邮件</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--联系人增长趋势 begin-->
+	<div class="panel panel-success has-right-btn">
+		<div class="panel-heading">
+			<h3 class="panel-title clearfix">
+				<span>联系人增长趋势</span>
+				<button type="button" class="btn btn-sm btn-default pull-right"><i class="glyphicon glyphicon-refresh"></i></button>
+				<button type="button" class="btn btn-sm btn-success pull-right">30天</button>
+				<button type="button" class="btn btn-sm btn-default pull-right">15天</button>
+				<button type="button" class="btn btn-sm btn-default pull-right">7天</button>
+			</h3>
+		</div>
+		<div class="panel-body">
+			<div id="contacts-echarts" style="width: 100%;height: 300px;"></div>
+		</div>
+	</div>
+	<!--联系人增长趋势 end-->
+
+	<!--筹款趋势 begin-->
+	<div class="panel panel-warning has-right-btn">
+		<div class="panel-heading">
+			<h3 class="panel-title clearfix">
+				<span>筹款趋势</span>
+				<button type="button" class="btn btn-sm btn-default pull-right"><i class="glyphicon glyphicon-refresh"></i></button>
+				<button type="button" class="btn btn-sm btn-warning pull-right">30天</button>
+				<button type="button" class="btn btn-sm btn-default pull-right">15天</button>
+				<button type="button" class="btn btn-sm btn-default pull-right">7天</button>
+			</h3>
+		</div>
+		<div class="panel-body">
+			<div id="fundraising-echarts" style="width:100%;height: 300px;"></div>
+		</div>
+	</div>
+	<!--筹款趋势 end-->
+</div>

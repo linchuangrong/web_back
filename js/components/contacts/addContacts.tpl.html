@@ -1,0 +1,239 @@
+<div id="addContacts">
+	<!--导航条 begin-->
+	<ol class="breadcrumb">
+		<li>
+			<a ui-sref="home">主页</a>
+		</li>
+		<li>
+			<a ui-sref="contacts">联系人</a>
+		</li>
+		<li class="active">
+			<span>新建联系人</span>
+		</li>
+	</ol>
+	<!--导航条 end-->
+
+	<!--联系人列表 begin-->
+	<div class="panel panel-default has-right-btn">
+		<div class="panel-heading">
+			<h3 class="panel-title clearfix">
+				<span>新建联系人</span>
+				<button type="button" class="btn btn-sm btn-success pull-right"><i class="icon iconfont import-contacts">&#xe60a;</i>&nbsp;导入联系人</button>
+			</h3>
+		</div>
+		<div class="panel-body" style="min-height: 300px;">
+			<form novalidate="novalidate" name="creatContactsForm" class="form-horizontal">
+				<!--基本信息 begin-->
+				<div class="padding-bottom-10">
+					<div class="alert alert-info">基本信息</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">姓名</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" placeholder="请输入名字">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">性别</label>
+								<div class="col-md-9">
+									<select class="form-control">
+										<option>男</option>
+										<option>女</option>
+										<option>保密</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">手机</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" placeholder="请输入手机">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">身份证</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" placeholder="请输入身份证">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">邮箱</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" placeholder="请输入邮箱">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">出生日期</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control" placeholder="请输入出生日期">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--基本信息 end-->
+				<!--机构信息 begin-->
+				<div class="padding-bottom-10">
+					<div class="alert alert-info">机构信息</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">机构名称</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">省份</label>
+								<div class="col-md-9">
+									<select class="form-control">
+										<option>广东</option>
+										<option>广西</option>
+										<option>北京</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">职位名称</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">地址</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">所在部门</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">单位电话</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--机构信息 end-->
+				<!--其他信息 begin-->
+				<div class="padding-bottom-10">
+					<div class="alert alert-info">其他信息</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">备用手机</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">QQ</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">备用邮箱</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">微信</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">标签</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">微博</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">淘宝帐号</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">支付宝帐号</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">国家</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="col-md-3 control-label text-right">负责人</label>
+								<div class="col-md-9">
+									<input type="text" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--其他信息 end-->
+				<div class="submit-div text-right">
+					<input type="submit" class="btn btn-success btn" value="保&nbsp;存" />
+				</div>
+
+			</form>
+		</div>
+	</div>
+	<!--联系人列表 end-->
+</div>

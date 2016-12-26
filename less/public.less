@@ -1,0 +1,80 @@
+/*定义全局可用的变量*/
+@background-color: #293748; //灰蓝色
+/*定义全局公用的css*/
+.bakcground-cover {
+    background-image: url("../img/auto.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*页面开始加载入口*/
+html,body{
+    overflow-x: hidden;
+}
+body,
+input,
+button,
+select,
+option,
+textarea {
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+//联系人页面，活动页面，筹款页面----拥有右侧小按钮的panel面板
+.has-right-btn {
+    .panel-title {
+        line-height: 30px;
+        .btn {
+            margin: 0 2px;
+            .import-contacts {
+                position: relative;
+                top: -1px;
+            }
+        }
+        .iconfont {
+            font-size: 12px;
+        }
+    }
+}
+/*分页样式*/
+div.page-bar {
+    //左侧分页样式继承bootstrap的，右侧自己写的
+    .not-select();
+    .pagination {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    a {
+        cursor: pointer;
+    }
+    .jump-page-box {
+        display: inline-block;
+        margin-left: 30px;
+        input {
+            width: 50px;
+            display: inline-block;
+            margin-left: 5px;
+            margin-right: 5px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .btn {
+            margin: 0 5px;
+        }
+    }
+    .page-count-box {
+        margin-left: 20px;
+        line-height: 34px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+//加上这个样式，使table能够超出部分隐藏
+.table-fixed{
+    table-layout: fixed;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="publicController as public">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<base href="./" />
+		<title>后台管理-{{title}}</title>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+	</head>
+
+	<body>
+		<!--头部 begin-->
+		<div id="header">
+			<div class="logo">
+				<a ui-sref="home"><img src="img/logo.png" alt="益齐" /></a>
+			</div>
+			<div class="search">
+				<div class="input-group">
+					<input type="text" class="form-control" placeholder="搜索联系人、活动、表单...">
+					<span class="input-group-btn"><button type="button" class="btn btn-default search-btn"><i class="glyphicon glyphicon-search"></i></button></span>
+				</div>
+			</div>
+			<div class="user pull-right dropdown">
+				<div class="photo">
+					<img src="img/example-slide-1.jpg" />
+				</div>
+				<div class="username" data-toggle="dropdown">
+					<span>欢迎你，</span>
+					<span>刘小二</span>
+					<div class="drop-down-btn">
+						<span class="caret"></span>
+					</div>
+				</div>
+				<!--下拉菜单 begin-->
+				<ul class="dropdown-menu dropdown-menu-right">
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="">菜单1</a>
+					</li>
+					<li role="presentation">
+						<a role="menuitem" tabindex="-1" href="">菜单2</a>
+					</li>
+				</ul>
+				<!--下拉菜单 end-->
+			</div>
+		</div>
+		<!--头部 end-->
+
+		<!--左侧菜单 begin-->
+		<div id="menu">
+			<!--<div class="none-text"></div>-->
+			<ul>
+				<li ng-class="{'active':currentRouter=='contacts'||currentRouter=='addContacts'||currentRouter=='sendSms'}" ui-sref="contacts">
+					<i class="glyphicon glyphicon-user"></i>
+					<span>联系人</span>
+				</li>
+				<li ng-class="{'active':currentRouter=='activity'}" ui-sref="activity">
+					<i class="glyphicon glyphicon-flag"></i>
+					<span>活动</span>
+				</li>
+				<li ng-class="{'active':currentRouter=='fundraising'}" ui-sref="fundraising">
+					<i class="icon iconfont">&#xe603;</i>
+					<span>筹款</span>
+				</li>
+				<li ng-class="{'active':currentRouter=='sms'}" ui-sref="sms">
+					<i class="glyphicon glyphicon-comment"></i>
+					<span>短信</span>
+					<span class="badge">6</span>
+				</li>
+				<li ng-class="{'active':currentRouter=='email'}" ui-sref="email">
+					<i class="glyphicon glyphicon-envelope"></i>
+					<span>邮件</span>
+					<span class="badge">14</span>
+				</li>
+				<li ng-class="{'active':currentRouter=='notes'}" ui-sref="notes">
+					<i class="icon iconfont pay-notes">&#xe605;</i>
+					<span>交易记录</span>
+				</li>
+			</ul>
+		</div>
+		<!--左侧菜单 end-->
+
+		<!--左上角小圆角 begin-->
+		<div id="top-radius">
+			<div></div>
+		</div>
+		<!--左上角小圆角 end-->
+
+		<!--右侧内容 begin-->
+		<div id="right-container">
+			<div class="main" ui-view></div>
+		</div>
+		<!--右侧内容 end-->
+
+		<script type="text/javascript" src="js/libs/jquery/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="js/libs/echarts/echarts.common.min.js"></script>
+		<script type="text/javascript" src="js/libs/bootstrap/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/libs/angular/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/router.js"></script>
+		<script type="text/javascript" src="js/components/publicController.js"></script>
+	</body>
+
+</html>

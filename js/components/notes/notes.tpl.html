@@ -1,0 +1,95 @@
+<div id="notes">
+	<!--导航条 begin-->
+	<ol class="breadcrumb">
+		<li>
+			<a ui-sref="home">主页</a>
+		</li>
+		<li class="active">
+			<span>交易记录</span>
+		</li>
+	</ol>
+	<!--导航条 end-->
+
+	<!--交易记录 begin-->
+	<form class="form-horizontal" novalidate="novalidate">
+		<div class="row search-container">
+			<div class="col-sm-6 col-md-4">
+				<div class="input-group">
+					<span class="input-group-addon">姓名</span>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="input-group">
+					<span class="input-group-addon">邮箱</span>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="input-group">
+					<span class="input-group-addon">手机</span>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="input-group">
+					<span class="input-group-addon">支付金额</span>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="input-group">
+					<span class="input-group-addon">支付时间</span>
+					<input type="text" class="form-control">
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-4">
+				<div class="input-group">
+					<button type="button" class="btn btn-success">
+						<i class="glyphicon glyphicon-search"></i>
+						<span>搜索</span>
+					</button>
+					<button type="button" class="btn btn-success">
+						<i class="glyphicon glyphicon-refresh"></i>
+						<span>刷新</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<div class="notes-content">
+		<table class="table table-fixed">
+			<thead>
+				<tr>
+					<th width="60">头像</th>
+					<th width="120">创建时间</th>
+					<th width="120">（物品）名称</th>
+					<th width="140">对方</th>
+					<th width="200">交易号</th>
+					<th>金额</th>
+					<th>明细</th>
+					<th>状态</th>
+					<th width="100" class="text-center">操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in [1,2,3,4,5,6,7]">
+					<td class="image"><img ng-src="{{public.imgUrl}}/example-slide-3.jpg" alt="图片"></td>
+					<td class="time">2016年12月2日 16:48</td>
+					<td class="goods-name">转帐</td>
+					<td class="people-name">益齐（深圳）企业咨询管理有限公司</td>
+					<td class="number">2100254****4557</td>
+					<td>225.30</td>
+					<td>无</td>
+					<td>交易成功</td>
+					<td width="100" class="text-center">
+						<a href="" class="glyphicon glyphicon-trash text-danger"></a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<page-bar page-change="notes.pageParams.pageChange()" page-count="notes.pageParams.page_count" current="notes.pageParams.current" show-page="{{notes.pageParams.showPage}}"></page-bar>
+	</div>
+	<!--交易记录 end-->
+</div>

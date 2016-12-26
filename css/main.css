@@ -1,0 +1,351 @@
+/*定义全局可用的变量*/
+/*定义全局公用的css*/
+.bakcground-cover {
+  background-image: url("../img/auto.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*页面开始加载入口*/
+html,
+body {
+  overflow-x: hidden;
+}
+body,
+input,
+button,
+select,
+option,
+textarea {
+  font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.has-right-btn .panel-title {
+  line-height: 30px;
+}
+.has-right-btn .panel-title .btn {
+  margin: 0 2px;
+}
+.has-right-btn .panel-title .btn .import-contacts {
+  position: relative;
+  top: -1px;
+}
+.has-right-btn .panel-title .iconfont {
+  font-size: 12px;
+}
+/*分页样式*/
+div.page-bar {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+div.page-bar .pagination {
+  display: inline-block;
+  vertical-align: middle;
+}
+div.page-bar a {
+  cursor: pointer;
+}
+div.page-bar .jump-page-box {
+  display: inline-block;
+  margin-left: 30px;
+}
+div.page-bar .jump-page-box input {
+  width: 50px;
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 5px;
+  vertical-align: middle;
+  text-align: center;
+}
+div.page-bar .jump-page-box .btn {
+  margin: 0 5px;
+}
+div.page-bar .page-count-box {
+  margin-left: 20px;
+  line-height: 34px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.table-fixed {
+  table-layout: fixed;
+}
+/**
+ * 作者：林创荣
+ * 功能：头部搜索框、左侧菜单
+ * 时间：2016年10月31日
+ */
+#header {
+  width: 100%;
+  height: 70px;
+  background-color: #293748;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 3;
+}
+#header .logo {
+  display: inline-block;
+  width: 220px;
+  text-align: center;
+  line-height: 70px;
+}
+#header .logo a {
+  display: inline-block;
+}
+#header .logo img {
+  border: 0;
+}
+#header .search {
+  display: inline-block;
+  width: 300px;
+  vertical-align: middle;
+}
+#header .search .search-btn {
+  color: #444;
+}
+#header .user {
+  display: inline-block;
+  height: 70px;
+  margin-right: 20px;
+  color: #FFFFFF;
+}
+#header .user .photo {
+  vertical-align: middle;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 6px #64c836;
+  box-shadow: 0 0 6px #64c836;
+}
+#header .user .photo img {
+  width: 100%;
+  height: 100%;
+}
+#header .user .username {
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+  line-height: 70px;
+  cursor: pointer;
+}
+#header .user .username .drop-down-btn {
+  display: inline-block;
+  width: 20px;
+  height: 100%;
+  text-align: center;
+}
+#menu {
+  width: 200px;
+  background-color: #293748;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 70px;
+  bottom: 0;
+}
+#menu .none-text {
+  height: 40px;
+  background: #526d8c;
+}
+#menu ul {
+  width: 100%;
+  padding-top: 18px;
+}
+#menu ul li {
+  list-style: none;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 38px;
+  border-left: 5px solid transparent;
+  -webkit-transition: all 0.1s;
+  -moz-transition: all 0.1s;
+  -ms-transition: all 0.1s;
+  transition: all 0.1s;
+  cursor: pointer;
+  color: #FFF;
+  letter-spacing: 0.4em;
+  padding-right: 30px;
+}
+#menu ul li i {
+  vertical-align: middle;
+}
+#menu ul li i.glyphicon-user {
+  top: 0;
+}
+#menu ul li i.pay-notes {
+  position: relative;
+  top: 1px;
+}
+#menu ul li span {
+  display: inline-block;
+  vertical-align: middle;
+}
+#menu ul li .badge {
+  letter-spacing: normal;
+  background: #fb8213;
+}
+#menu ul li.active,
+#menu ul li:hover {
+  border-left: 5px solid #28a7e1;
+  background: #526d8c;
+}
+#top-radius {
+  position: fixed;
+  top: 70px;
+  left: 200px;
+  z-index: 2;
+  width: 20px;
+  background-color: #293748;
+  height: 20px;
+}
+#top-radius div {
+  background: #FFFFFF;
+  -moz-border-radius: 5px 0 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  border-radius: 5px 0 0 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+#right-container {
+  position: relative;
+  margin-left: 200px;
+  margin-top: 70px;
+  padding: 20px 30px 30px;
+}
+#right-container .main {
+  position: relative;
+  z-index: 1;
+  -webkit-transition: all linear 0.2s;
+  -moz-transition: all linear 0.2s;
+  -ms-transition: all linear 0.2s;
+  transition: all linear 0.2s;
+}
+#right-container .main.ng-leave {
+  display: none;
+  -moz-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+}
+#right-container .main.ng-enter {
+  -moz-opacity: 0;
+  -webkit-opacity: 0;
+  opacity: 0;
+}
+#home .home-block i {
+  width: 55px;
+  height: 55px;
+  font-size: 28px;
+  background-color: #FFFFFF;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: block;
+  text-align: center;
+  line-height: 55px;
+}
+#home .home-block .announcement-text {
+  line-height: 55px;
+  font-size: 14px;
+}
+#home .home-block .announcement-text span {
+  font-size: 30px;
+  margin-right: 5px;
+}
+/*联系人*/
+/*新建联系人*/
+#addContacts .padding-bottom-10 {
+  padding-bottom: 10px;
+}
+#addContacts .alert {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+#addContacts .submit-div {
+  padding: 10px 0;
+}
+#addContacts .submit-div .btn {
+  width: 100px;
+}
+#sms table,
+#email table {
+  table-layout: fixed;
+}
+#sms table tr td.overflow-ellipsis,
+#email table tr td.overflow-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#sendSms .textarea {
+  min-height: 300px;
+}
+#sendSms .alert {
+  float: left;
+  display: inline-block;
+  padding: 5px 7px;
+  margin-right: 5px;
+}
+#sendSms .alert button {
+  margin-left: 5px;
+}
+#sendSms .add-contacts-btn .glyphicon {
+  font-size: 12px;
+}
+#notes .search-container > div {
+  margin-bottom: 20px;
+}
+#notes .search-container > div .input-group {
+  width: 100%;
+}
+#notes .search-container > div .input-group .input-group-addon {
+  width: 85px;
+}
+#notes .search-container > div .input-group button {
+  margin-right: 10px;
+}
+#notes .search-container > div .input-group button .glyphicon {
+  font-size: 12px;
+}
+#notes .table tr {
+  padding-bottom: 10px;
+}
+#notes .table tr td {
+  border: none;
+  padding: 8px 8px 20px;
+}
+#notes .table tr td.image {
+  width: 60px;
+}
+#notes .table tr td.image img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+#notes .table tr td.time {
+  width: 120px;
+}
+#notes .table tr td.goods-name {
+  width: 120px;
+}
+#notes .table tr td.people-name {
+  width: 140px;
+}
+#notes .table tr td.number {
+  width: 200px;
+}

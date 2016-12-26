@@ -1,0 +1,94 @@
+<div id="activity">
+	<!--导航条 begin-->
+	<ol class="breadcrumb">
+		<li>
+			<a ui-sref="home">主页</a>
+		</li>
+		<li class="active">
+			<span>活动</span>
+		</li>
+	</ol>
+	<!--导航条 end-->
+
+	<div>
+		<!--活动列表 begin-->
+		<div class="panel panel-default has-right-btn">
+			<div class="panel-heading">
+				<h3 class="panel-title clearfix">
+					<span>活动列表</span>
+					<!--<button type="button" class="btn btn-sm btn-success pull-right"><i class="glyphicon glyphicon-th-large"></i>&nbsp;分类管理</button>-->
+					<button type="button" class="btn btn-sm btn-success pull-right"><i class="glyphicon glyphicon-cloud-download"></i>&nbsp;导出活动</button>
+					<button type="button" class="btn btn-sm btn-success pull-right"><i class="glyphicon glyphicon-plus"></i>&nbsp;新建活动</button>
+				</h3>
+			</div>
+			<div class="panel-body" style="min-height: 300px;">
+				<ul class="nav nav-tabs">
+					<li role="presentation" class="active">
+						<a href="javascript:void(0)">全部</a>
+					</li>
+					<li role="presentation">
+						<a href="javascript:void(0)"><i class="glyphicon glyphicon-plus"></i>&nbsp;分类</a>
+					</li>
+					<li role="presentation">
+						<!--下拉列表 begin-->
+						<a class="dropdown-toggle" data-toggle="dropdown" href="javascript:void(0)" aria-expanded="false">Messages <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li>
+								<a href="javascript:void(0)">Action</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">Another action</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">Something else here</a>
+							</li>
+							<li class="divider"></li>
+							<li>
+								<a href="javascript:void(0)">Separated link</a>
+							</li>
+						</ul>
+						<!--下拉列表 end-->
+					</li>
+				</ul>
+				
+				<!--表格 begin-->
+				<div class="table-responsive">
+					<table class="table table-striped table-hover" style="word-break:break-all; word-wrap:break-word;">
+						<caption></caption>
+						<thead>
+							<tr>
+								<th width="60">序号</th>
+								<th>活动名称</th>
+								<th>活动类型</th>
+								<th>活动时间</th>
+								<th>负责人</th>
+								<th>时长</th>
+								<th>人数</th>
+								<th width="100" class="text-center">操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
+								<td>{{item}}</td>
+								<td>活动名称活动名称</td>
+								<td><span class="label label-success">创业</span></td>
+								<td>2016-11-04</td>
+								<td>Bangalore</td>
+								<td>29天</td>
+								<td>96</td>
+								<td width="100" class="text-center">
+									<a href="" class="glyphicon glyphicon-pencil text-danger"></a>
+									&nbsp;
+									<a href="" class="glyphicon glyphicon-trash text-danger"></a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<!--表格 end-->
+				<page-bar page-change="activity.pageParams.pageChange()" page-count="activity.pageParams.page_count" current="activity.pageParams.current" show-page="{{activity.pageParams.showPage}}"></page-bar>
+			</div>
+		</div>
+		<!--活动列表 end-->
+	</div>
+</div>

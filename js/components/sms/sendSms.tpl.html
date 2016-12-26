@@ -1,0 +1,68 @@
+<div id="sendSms">
+	<!--导航条 begin-->
+	<ol class="breadcrumb">
+		<li>
+			<a ui-sref="home">主页</a>
+		</li>
+		<li>
+			<a ui-sref="contacts">联系人</a>
+		</li>
+		<li class="active">
+			<span>群发短信</span>
+		</li>
+	</ol>
+	<!--导航条 end-->
+
+	<!-- begin-->
+	<form novalidate="novalidate" name="sendSmsForm" class="form-horizontal">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label class="col-md-2 col-lg-1 control-label text-right">收信人</label>
+					<div class="col-md-10 col-lg-11 clearfix">
+						<!--<input type="text" class="form-control">-->
+						<div class="alert alert-info" ng-repeat="item in [1,2,3,4,5,6]">
+							<button type="button" class="close"><span>&times;</span></button>
+							<span>小白</span>&nbsp;
+						</div>
+						<div class="alert alert-info">
+							<button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+							<span>胖子明</span>&nbsp;
+						</div>
+						<div class="alert alert-info">
+							<button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+							<span>小小黑</span>&nbsp;
+						</div>
+						<div class="alert alert-info">
+							<button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+							<span>这条可以删除</span>&nbsp;
+						</div>
+						<div class="clearfix"></div>
+						<button type="button" class="btn btn-info add-contacts-btn"><i class="glyphicon glyphicon-plus"></i> 添加联系人</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label class="col-md-2 col-lg-1 control-label text-right">短信内容</label>
+					<div class="col-md-10 col-lg-11">
+						<textarea type="text" class="form-control textarea" placeholder="一条短信为64个字，1个字母和1个汉字都认为是1个字。（统计仅为参考，按照实际发送量为准）"></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label class="col-md-2 col-lg-1 control-label text-right"></label>
+					<div class="col-md-10 col-lg-11">
+						<button type="submit" class="btn btn-success">确认发送</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</form>
+	<!-- end-->
+</div>

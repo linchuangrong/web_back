@@ -1,0 +1,84 @@
+<div id="contacts">
+	<!--导航条 begin-->
+	<ol class="breadcrumb">
+		<li>
+			<a ui-sref="home">主页</a>
+		</li>
+		<li class="active">
+			<span>联系人</span>
+		</li>
+	</ol>
+	<!--导航条 end-->
+
+	<!--联系人列表 begin-->
+	<div class="panel panel-default has-right-btn">
+		<div class="panel-heading">
+			<h3 class="panel-title clearfix">
+				<span>联系人列表</span>
+				<button type="button" class="btn btn-sm btn-success pull-right"><i class="icon iconfont import-contacts">&#xe60a;</i>&nbsp;导入联系人</button>
+				<button type="button" class="btn btn-sm btn-success pull-right" ui-sref="addContacts"><i class="icon iconfont creat-contacts">&#xe60c;</i>&nbsp;新建联系人</button>
+			</h3>
+		</div>
+		<div class="panel-body" style="min-height: 300px;">
+			<div class="button-list">
+				<button type="button" class="btn btn-primary" ui-sref="sendSms"><i class="glyphicon glyphicon-comment"></i>&nbsp;发短信</button>
+				<button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-envelope"></i>&nbsp;发邮件</button>
+				<button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-refresh"></i>&nbsp;批量更新</button>
+				<button type="button" class="btn btn-primary"><i class="glyphicon glyphicon-resize-small"></i>&nbsp;合并重复</button>
+				<div class="btn-group">
+					<a class="btn btn-primary dropdown-toggle" data-toggle="dropdown">更多操作&nbsp;<span class="caret"></span></a>
+					<ul class="dropdown-menu pull-left">
+						<li>
+							<a tabindex="-1" href="javascript:void(0)">Action</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="javascript:void(0)">Start</a>
+						</li>
+						<li>
+							<a tabindex="-1" href="javascript:void(0)">End</a>
+						</li>
+						<li class="divider"></li>
+						<li>
+							<a tabindex="-1" href="javascript:void(0)">Separated link</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="table-responsive">
+				<table class="table table-striped table-hover" style="word-break:break-all; word-wrap:break-word;">
+					<caption style="height: 20px;"></caption>
+					<thead>
+						<tr>
+							<th width="30">
+								<input type="checkbox" ng-model="contacts.checkAll">
+							</th>
+							<th>序号</th>
+							<th>姓名</th>
+							<th>手机</th>
+							<th>邮箱</th>
+							<th>负责人</th>
+							<th>标签</th>
+							<th width="60" class="text-center">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in [1,2,3,4,5,6,7,8,9,10]">
+							<td width="30"><input type="checkbox" ng-checked="contacts.checkAll"></td>
+							<td>{{item}}</td>
+							<td>Tanmay</td>
+							<td>18819493835</td>
+							<td>330493699@qq.com</td>
+							<td>Bangalore</td>
+							<td>this is my friend</td>
+							<td width="60" class="text-center">
+								<a href="" class="glyphicon glyphicon-trash text-danger"></a>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<page-bar page-change="contacts.pageParams.pageChange()" page-count="contacts.pageParams.page_count" current="contacts.pageParams.current" show-page="{{contacts.pageParams.showPage}}"></page-bar>
+		</div>
+	</div>
+	<!--联系人列表 end-->
+</div>
